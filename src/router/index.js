@@ -1,6 +1,7 @@
-import Contador from '@/modules/contador/components/Contador.vue'
-import ListaDeTareas from '@/modules/ListaDeTarea/components/ListaDeTareas.vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import Contador from "@/modules/contador/components/Contador.vue";
+import ListaDeTareas from "@/modules/ListaDeTarea/components/ListaDeTareas.vue";
+import RegistroView from "@/modules/registro/views/RegistroView.vue";
+import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,16 +21,21 @@ const router = createRouter({
     // },
 
     {
-      path:'/contador',
-      name:'Contador',
-      component: Contador
+      path: "/contador",
+      name: "Contador",
+      component: Contador,
     },
     {
-      path:'/lista-de-tareas',
-      name:'Lista de tareas',
-      component: ListaDeTareas
-    }
+      path: "/lista-de-tareas",
+      name: "Lista de tareas",
+      component: ListaDeTareas,
+    },
+    {
+      path: "/registar",
+      name: "Registrar",
+      component: RegistroView,
+    },
   ],
-})
+});
 
-export default router
+export default router;

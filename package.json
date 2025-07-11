@@ -10,9 +10,11 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "@vee-validate/yup": "^4.15.1",
     "pinia": "^3.0.3",
     "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "vue-validate": "^1.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
