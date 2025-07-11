@@ -1,11 +1,13 @@
 <template>
-  <h1>HoLa Mundo</h1>
-  <contador></contador>
+  <main-view></main-view>
+
+<h1>HoLa Mundo</h1>
+
 
 </template>
 
 <script setup>
-  import Contador from './components/Contador.vue';
+  import MainView from './views/MainView.vue';
 </script>
 
 <style scoped>
