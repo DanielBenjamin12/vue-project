@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  {{ weatherStore.temperatura }}°C
+    <h3>La temperatura actual es: {{ weatherStore.temperatura }}°C </h3>
 </template>
 
 <script setup>
