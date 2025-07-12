@@ -4,14 +4,14 @@
 
     <Form :validation-schema="shema" @submit="onSubmit">
       <div class="form">
-        <label for="nombre">Nombre</label>
-        <Field type="text" name="nombre" id="nombre" placeholder="Nombre"></Field>
+        <label for="nombre">Nombre: </label>
+        <Field v-model="nombre" type="text" name="nombre" id="nombre" placeholder="Nombre"></Field>
         <ErrorMessage name="nombre"></ErrorMessage>
       </div>
 
       <div class="form">
-        <label for="email">Email</label>
-        <Field type="email" name="email" id="email" placeholder="Email"></Field>
+        <label for="email">Email: </label>
+        <Field v-model="email" type="email" name="email" id="email" placeholder="Email"></Field>
         <ErrorMessage name="email"></ErrorMessage>
       </div>
 
@@ -25,12 +25,21 @@
 </template>
 
 <script setup>
-import { Field, Form, ErrorMessage} from 'vee-validate'
+import { Field, Form, ErrorMessage } from 'vee-validate'
 import { shema } from '../schema/validationShema';
+import { useRegistrarStore } from '../stores/registrarStore';
+import {ref} from 'vue';
 
-const onSubmit = (values) => {
-  console.log('Formulario enviado con los siguientes valores:', values);
-  // Aquí puedes manejar el envío del formulario, como hacer una petición a una API
+const registrarStore = useRegistrarStore();
+
+const nombre = ref('');
+const email = ref('')
+
+
+
+const onSubmit = () => {
+  registrarStore.guardarRegistro(nombre.value, email.value)
+  console.log('Formulario enviado con los siguientes valores:');
 };
 
 </script>

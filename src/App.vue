@@ -1,9 +1,5 @@
 <template>
-  <main-view></main-view>
-
-<h1>HoLa Mundo</h1>
-
-
+  <MainView />
 </template>
 
 <script setup>
