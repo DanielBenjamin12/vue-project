@@ -14,6 +14,9 @@
       <li>
         <router-link to="/registar">Registrar</router-link>
       </li>
+      <li>
+        <router-link to="/calcular">Calcular</router-link>
+      </li>
     </ul>
 
   </div>
@@ -21,7 +24,6 @@
 
 <script setup>
 import { useRegistrarStore } from '@/modules/registro/stores/registrarStore';
-
 
 const registrarStore = useRegistrarStore();
 

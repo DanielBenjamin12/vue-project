@@ -1,3 +1,4 @@
+import CalcularView from "@/modules/calcular/views/CalcularView.vue";
 import Contador from "@/modules/contador/components/Contador.vue";
 import ListaDeTareas from "@/modules/ListaDeTarea/components/ListaDeTareas.vue";
 import RegistroView from "@/modules/registro/views/RegistroView.vue";
@@ -34,6 +35,11 @@ const router = createRouter({
       path: "/registar",
       name: "Registrar",
       component: RegistroView,
+    },
+    {
+      path: "/calcular",
+      name: "Calcular",
+      component: CalcularView,
     },
   ],
 });
